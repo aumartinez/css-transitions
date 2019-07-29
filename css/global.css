@@ -1,0 +1,194 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 36px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 24px;
+	width: 300px;
+	padding-bottom: 25px;
+	border-bottom: 2px solid #e4e4e4;
+}
+
+#main {	
+	max-width: 960px;
+	margin: 0 auto 50px;
+	padding: 0 15px;
+	display: block;
+}
+
+.row {
+	margin: 30px 0 40px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;	
+	transition: all 0.5s ease; /* May consider change the timing here */
+	margin: 0 auto;
+	cursor: pointer;
+	position: relative;
+}
+
+.box span {
+	width: 25px;
+	height: 25px;
+	background-color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	display: block;
+	text-align: center;
+	transform: rotate(0);
+	transition: all 0.5s ease; /* May consider change the timing here */
+}
+
+.titles {
+	max-width: 100%;    	
+}
+
+.titles, 
+.result {
+	text-align: center;	
+}
+
+.result {
+	color: crimson;
+}
+
+.clearer {
+	clear: both;
+}
+
+/* Transitions initial states */
+
+.rotate {
+	transform: rotate(0deg);
+}
+
+.rotate-mod-1 {
+	transform: rotate(0deg);
+}
+
+.rotate-mod-2 {
+	transform: rotate(0deg);
+}
+
+.rotate-more {
+	transform: rotate(0deg);
+}
+
+.chgbg {
+	background-color: red;
+}
+
+.opacity {
+	background-color: #ccc;
+	border: 1px solid transparent;
+}
+
+.scale {
+	transform: scale(1);
+}
+
+.wide {
+	width: 100px;
+}
+
+.higher {
+	height: 100px;
+}
+
+.circle {
+	border-radius: 0;
+}
+
+.move-top {
+	transform: translate(0, 0);
+}
+
+/* Transitions animations */
+
+.rotate.active {
+	transform: rotate(-10deg);
+}
+
+.rotate-mod-1.active {
+	transform: rotate(-90deg);
+}
+
+.rotate-mod-2.active {
+	transform: rotate(-90deg);
+}
+
+.rotate-mod-2.active span {
+	transform: rotate(90deg);
+}
+
+.rotate-more.active {
+	transform: rotate(-360deg);
+}
+
+.chgbg.active {
+	background-color: green;
+}
+
+.opacity.active {
+	background-color: transparent;
+	border: 1px solid #ccc;	
+}
+
+.scale.active {
+	transform: scale(1.5);
+}
+
+.wide.active {
+	width: 300px;
+}
+
+.higher.active {
+	height: 300px;
+}
+
+.circle.active {
+	border-radius: 50%;
+}
+
+.move-top.active {
+	transform: translate(50px, -50px);
+}
+
+@media (min-width: 768px) {
+	
+	.box {
+		float: left;
+		margin: 0;
+	}
+	
+	.titles {
+		max-width: 300px;
+	}
+	
+	.titles, 
+	.result {
+		text-align: left;
+		float: left;
+		margin-left: 100px;
+	}
+}
