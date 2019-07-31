@@ -55,7 +55,7 @@ function start() {
 			}
 			else {
 				classArr.push(newClass);
-				elem.className.join(" ");
+				elem.className = classArr.join(" ");
 			}
 		}
 		
